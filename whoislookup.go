@@ -801,7 +801,7 @@ func main() {
 
 	queries  := strings.Split(os.Args[1], "*")
 	throttle := 5
-    
+
 	type empty struct{}
     
 	var wg sync.WaitGroup
@@ -829,17 +829,11 @@ func main() {
 			o := lookup(value, 0)
 
 			if o.Whois == "" {
-
-				fmt.Println("1st Empty whois for value", value)
-				spew.Dump(o)
-
+                
 				o = lookup(value, 0)
 			}
 
 			if o.Whois == "" {
-
-				fmt.Println("2nd Empty whois for value", value)
-				spew.Dump(o)
 
 				o = lookup(value, localWhois)
 			}
