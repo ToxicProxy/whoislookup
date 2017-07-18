@@ -1,2 +1,2 @@
 # whoislookup
-Mass Whois lookup from different sources.
+Lookup whois from different sources
